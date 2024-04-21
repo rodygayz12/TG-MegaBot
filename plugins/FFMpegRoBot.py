@@ -148,7 +148,7 @@ async def trim(bot, update):
         )
 
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["storage"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["storage"]))
 async def storage_info(bot, update):
     TRChatBase(update.from_user.id, update.text, "storage")
     if str(update.from_user.id) not in Config.SUPER7X_DLBOT_USERS:
@@ -178,7 +178,7 @@ async def storage_info(bot, update):
         )
 
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["clearffmpegmedia"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["clearffmpegmedia"]))
 async def clear_media(bot, update):
     TRChatBase(update.from_user.id, update.text, "clearffmpegmedia")
     if str(update.from_user.id) not in Config.SUPER7X_DLBOT_USERS:
@@ -198,7 +198,7 @@ async def clear_media(bot, update):
     )
 
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["downloadmedia"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["downloadmedia"]))
 async def download_media(bot, update):
     TRChatBase(update.from_user.id, update.text, "downloadmedia")
     if str(update.from_user.id) not in Config.SUPER7X_DLBOT_USERS:
